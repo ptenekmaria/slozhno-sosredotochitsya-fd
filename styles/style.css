@@ -1,5 +1,118 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--page-font), sans-serif;
+  font-weight: var(--text-font-weight);
+}
+
+.header {
+  height: 100vh;
+  background-image: url("../images/cover-image-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font: inherit;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid var(--decoration-color);
+  border-right: 1px solid var(--decoration-color);
+  inline-size: 25px;
+  block-size: 25px;
+  top: var(--decoration-gap);
+  right: var(--decoration-gap);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid var(--decoration-color);
+  border-bottom: 1px solid var(--decoration-color);
+  inline-size: 25px;
+  block-size: 25px;
+  left: var(--decoration-gap);
+  bottom: var(--decoration-gap);
+}
+
+.header__rec {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  line-height: 25px;
+  position: relative;
+  text-align: end;
+  margin-top: var(--decoration-gap);
+  margin-right: var(--decoration-gap);
+  padding-right: 27px;
+}
+.header__rec::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 9px;
+  background-color: var(--decoration-color);
+  box-shadow: 0 0 4px 2px #FF0070;
+}
+
+.header__theme-menu {
+  margin-right: var(--decoration-gap);
+}
+
+.header__theme-menu-item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__theme-menu-button {
+  color: var(--decoration-color);
+  background-color: transparent;
+  border: none;
+  line-height: 18px;
+  text-transform: lowercase;
+  font-weight: inherit;
+  padding: 4px 13px 4px 13px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--decoration-color);
+}
+
+.header__title,
+.footer__text {
+  color: var(--title-color);
+  font-size: var(--title-font-size);
+  font-weight: var(--header-font-weight);
+  line-height: 95.7px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  text-transform: lowercase;
+}
+
+.header__caption {
+  margin: var(--decoration-gap);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--overlay-text-color);
+  font-weight: var(--header-font-weight);
+}
+
+.footer {
+  height: 100vh;
+  font: inherit;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
