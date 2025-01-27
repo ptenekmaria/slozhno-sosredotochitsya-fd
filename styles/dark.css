@@ -6,18 +6,18 @@
 
 :root.theme-dark {
   --background-color: #000028;
+  --header-background-image: url("../images/cover-image-dark.png");
   --text-color: #F1B2CE;
+  --text-color-rgb: 241, 178, 206;
   --accent-color: #FF0070;
+  --accent-color-rgb: 255, 0, 112;
   --title-color: #DB00FF;
   --section-header-color: var(--accent-color);
   --overlay-text-color: var(--background-color);
   --decoration-color: var(--accent-color);
+  --decoration-color-rgb: var(--accent-color-rgb);
 }
 
 .theme-dark .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
-.theme-dark .header {
-  background-image: url("../images/cover-image-dark.png");
 }

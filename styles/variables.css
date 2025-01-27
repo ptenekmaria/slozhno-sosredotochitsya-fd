@@ -4,12 +4,16 @@
 */
 :root {
   --background-color: #000028;
+  --header-background-image: url("../images/cover-image-dark.png");
   --text-color: #F1B2CE;
+  --text-color-rgb: 241, 178, 206;
   --accent-color: #FF0070;
+  --accent-color-rgb: 255, 0, 112;
   --title-color: #DB00FF;
   --section-header-color: var(--accent-color);
   --overlay-text-color: var(--background-color);
   --decoration-color: var(--accent-color);
+  --decoration-color-rgb: var(--accent-color-rgb);
   --page-font: "IBM Plex mono";
   --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --text-font-size: 18px;
