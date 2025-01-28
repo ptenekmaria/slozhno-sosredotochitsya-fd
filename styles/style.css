@@ -144,15 +144,15 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--regular-gap);
-  margin-top: 50px;
+  margin-top: var(--section-margin-top);
 }
 
 .section:first-child {
-  margin-top: 40px;
+  margin-top: var(--end-section-margin);
 }
 
 .section:last-child {
-  margin-bottom: 40px;
+  margin-bottom: var(--end-section-margin);
 }
 
 .section__header {
@@ -234,10 +234,6 @@
     grid-column: 2 / 3;
   }
 
-  .section:first-child {
-    margin-top: 60px;
-  } 
-  
   .section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
