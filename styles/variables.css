@@ -18,8 +18,8 @@
   --text-font-weight: 400;
   --header-font-weight: 700;
   --regular-gap: 20px;
-  --decoration-gap: clamp(10px , 2.7vw , 20px);
-  --header-margin-left: min(10px, 20px - 2.6vw);
+  --decoration-gap: clamp(10px , 2.65vw , 20px);
+  --header-margin-left: min(10px , 20px - 2.6vw);
 }
 
 @media (width >= 768px) {
