@@ -1,7 +1,5 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+/* По умолчанию цвета заданы для темной темы */
+
 :root {
   --background-color: #000028;
   --header-background-image: url("../images/cover-image-dark.png");
@@ -15,17 +13,19 @@
   --decoration-color: var(--accent-color);
   --decoration-color-rgb: var(--accent-color-rgb);
   --page-font: "IBM Plex mono";
-  --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-font-size: clamp(7.25rem , 7.0115rem + 1.0178vw , 7.5rem);
   --text-font-size: 18px;
   --text-font-weight: 400;
   --header-font-weight: 700;
   --regular-gap: 20px;
-  --decoration-gap: clamp(10px, 2.7vw ,20px);
+  --decoration-gap: clamp(10px , 2.7vw , 20px);
+  --header-margin-left: min(10px, 20px - 2.6vw);
 }
 
 @media (width >= 768px) {
   :root {
-    --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --title-font-size: clamp(7.5rem , 0.5625rem + 14.4531vw , 9.8125rem);
     --decoration-gap: 20px;
+    --header-margin-left: 0;
   }
 }

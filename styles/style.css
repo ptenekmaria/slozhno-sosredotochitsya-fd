@@ -1,4 +1,8 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* 
+  Основные стили проекта
+  По умолчанию заданы стили для темной темы 
+  Медиа-запросы под разные разрешения в конце файла
+*/
 
 .page {
   background-color: var(--background-color);
@@ -25,8 +29,10 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 1fr;
+  justify-items: center;
   align-items: center;
-  padding: 20px 0;
+  padding: var(--regular-gap) 0;
+
 }
 
 .decorated-zone::before {
@@ -72,22 +78,18 @@
   block-size: 9px;
   border-radius: 9px;
   background-color: var(--decoration-color);
-  box-shadow: 0 0 4px 2px #FF0070;
+  box-shadow: 0 0 4px 2px var(--decoration-color);
 }
 
 .header__theme-menu {
   margin: auto var(--decoration-gap);
+  justify-self: end;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.header__theme-menu-item {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .header__theme-menu-button {
@@ -100,12 +102,17 @@
   padding: 4px 13px 4px 13px;
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid rgba(var(--decoration-color-rgb), 0.4);
-}
-
 .header__theme-menu-button_active {
   outline: 1px solid var(--decoration-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decoration-color);
 }
 
 .header__title,
@@ -119,7 +126,9 @@
 }
 
 .header__title {
-  margin: var(--decoration-gap);
+  display: inline-block;
+  justify-self: start;
+  margin-left: var(--header-margin-left);
 }
 
 .header__caption {
@@ -170,11 +179,11 @@
   text-shadow: 2px 1px 0 var(--accent-color);
 }
 
-.text-link:hover {
-  border-bottom: 1px solid currentColor;
+.text-link:focus {
+  outline: none;
 }
 
-.text-link:focus {
+.text-link:focus-visible {
   outline: 1px solid currentColor;
 }
 
@@ -200,4 +209,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media (width >= 768px) {
+  
+  .header {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .header__theme-menu {
+    align-self: end;
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid rgba(var(--decoration-color-rgb), 0.4);
+  }
+
+  .header__caption {
+    align-self: start;
+    padding-top: 20px;
+  }
+
+  .text-link:hover {
+    border-bottom: 1px solid currentColor;
+  }
+
+}
+
+@media (width >= 1024px) {
+
+
+
 }

@@ -1,8 +1,4 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+/* Параметры светлой темы при наличии класса */
 
 :root.theme-light {
   --background-color: #FFF1F7;
@@ -18,10 +14,30 @@
   --decoration-color-rgb: var(--text-color-rgb);
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
-
 .theme-light .header__rec {
   display: none;
+}
+
+/* Параметры светлой темы для режима авто */
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    --background-color: #FFF1F7;
+    --header-background-image: url("../images/cover-image-light.png");
+    --text-color: #353430;
+    --text-color-rgb: 53, 52, 48;
+    --accent-color: #FF8DCB;
+    --accent-color-rgb: 255, 141, 203;
+    --title-color: #FFC2E6;
+    --section-header-color: var(--text-color);
+    --overlay-text-color: var(--text-color);
+    --decoration-color: var(--text-color);
+    --decoration-color-rgb: var(--text-color-rgb);
+  }
+
+  .header__rec {
+    display: none;
+  }
+
 }
