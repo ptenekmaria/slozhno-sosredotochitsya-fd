@@ -21,7 +21,8 @@
   --decoration-gap: clamp(10px , 2.65vw , 20px);
   --header-margin-left: min(10px , 20px - 2.6vw);
   --section-margin-top: 50px;
-  --end-section-margin: 40px; 
+  --end-section-margin: 40px;
+  --section-gap-margin: 11px;
 }
 
 @media (width >= 768px) {
@@ -30,6 +31,6 @@
     --decoration-gap: 20px;
     --header-margin-left: 0;
     --section-margin-top: 80px;
-    --end-section-margin: 60px; 
+    --end-section-margin: 60px;
   }
 }
