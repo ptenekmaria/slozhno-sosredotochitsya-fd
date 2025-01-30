@@ -23,6 +23,7 @@
   --section-margin-top: 50px;
   --end-section-margin: 40px;
   --section-gap-margin: 11px;
+  --min-height: 668px;
 }
 
 @media (width >= 768px) {
