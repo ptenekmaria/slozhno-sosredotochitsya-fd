@@ -125,8 +125,7 @@
 }
 
 .header__title {
-  justify-self: start;
-  margin-left: var(--header-margin-left);
+  margin: 10px;
 }
 
 .header__caption {
@@ -235,6 +234,10 @@
       cursor: pointer;
     }
 
+  }
+
+  .header__title {
+    justify-self: start;
   }
 
   .header__caption {

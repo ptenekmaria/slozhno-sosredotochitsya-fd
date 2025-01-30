@@ -19,7 +19,6 @@
   --header-font-weight: 700;
   --regular-gap: 20px;
   --decoration-gap: clamp(10px , 2.65vw , 20px);
-  --header-margin-left: min(10px , 20px - 2.6vw);
   --section-margin-top: 50px;
   --end-section-margin: 40px;
   --section-gap-margin: 11px;
@@ -30,7 +29,6 @@
   :root {
     --title-font-size: clamp(7.5rem , 0.5625rem + 14.4531vw , 9.8125rem);
     --decoration-gap: 20px;
-    --header-margin-left: 0;
     --section-margin-top: 80px;
     --end-section-margin: 60px;
   }
